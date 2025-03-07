@@ -6,7 +6,7 @@ RUN apt-get update && \
   && rm -rf /var/lib/apt/lists/* && apt-get clean && apt-get autoclean && apt-get autoremove
 
 # URL from https://kaitai.io/#download-universal
-ENV KAITAI_URL https://dl.bintray.com/kaitai-io/universal/0.8/kaitai-struct-compiler-0.8.zip
+ENV KAITAI_URL https://github.com/kaitai-io/kaitai_struct_compiler/releases/download/0.10/kaitai-struct-compiler-0.10.zip
 RUN curl -SL ${KAITAI_URL} -o /tmp/kaitai-struct-compiler.zip && \
 	unzip /tmp/kaitai-struct-compiler.zip -d /opt/ && \
 	rm /tmp/kaitai-struct-compiler.zip && \
